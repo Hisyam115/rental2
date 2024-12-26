@@ -1,0 +1,176 @@
+/* Styling Sidebar */
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #212121; /* Dark Gray Background */
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #1c1c1c; /* Darker Gray */
+    color: #e0f2f1; /* Light Green */
+    height: 100%;
+    position: fixed;
+    padding-top: 30px;
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #4db6ac;
+}
+
+#sidebar h2 {
+    font-size: 28px;
+    color: #4db6ac; /* Green-Blue */
+    margin: 0;
+}
+
+#sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#sidebar ul li a {
+    color: #b2dfdb; /* Light Green */
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid #4db6ac;
+}
+
+#sidebar ul li a:hover, 
+#sidebar ul li a.active {
+    background-color: #4db6ac;
+    color: white;
+}
+
+/* Sidebar footer */
+#sidebar .sidebar-footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #4db6ac;
+}
+
+#sidebar .sidebar-footer small {
+    color: #80cbc4; /* Light Green */
+}
+
+/* Content area */
+#page-content-wrapper {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #303030; /* Slightly lighter gray */
+    color: #e0f2f1; /* Text Color */
+    transition: margin-left 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e0f2f1; /* Navbar text color */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #4db6ac; /* Navbar hover color */
+}
+
+.card {
+    background-color: #424242; /* Dark Card Background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #e0f2f1;
+}
+
+.card h5 {
+    color: #80cbc4; /* Light Green */
+}
+
+.card i {
+    color: #4db6ac; /* Green-Blue for icons */
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #4db6ac; /* Green-Blue border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 24px;
+    color: #4db6ac;
+}
+
+.chart {
+    height: 200px;
+    background-color: #37474f; /* Dark Slate Blue */
+    border-radius: 10px;
+    border: 1px solid #80cbc4; /* Light Green Border */
+}
+
+button {
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #4db6ac;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    #wrapper {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .sidebar-footer {
+        display: none; /* Hide footer on mobile */
+    }
+}
+
+/* Button for toggling sidebar visibility */
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #sidebar {
+        position: absolute;
+        left: -250px;
+        transition: left 0.3s ease;
+    }
+
+    #sidebar.open {
+        left: 0;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+    }
+}

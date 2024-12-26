@@ -1,0 +1,128 @@
+/* Mengatur tampilan utama */
+body {
+    background: linear-gradient(145deg, #2c2c2c, #1a1a1a); /* Gradient abu-abu gelap */
+    color: #e0f2f1; /* Hijau tosca terang */
+    font-family: 'Roboto', sans-serif; /* Font modern */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Kontainer berada di tengah dengan styling */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #242424; /* Abu-abu gelap */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animasi muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    color: #80cbc4; /* Hijau tosca */
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Label input */
+.form-label {
+    color: #b2dfdb; /* Hijau tosca lebih terang */
+}
+
+/* Input field */
+.form-control {
+    background-color: #1e1e1e; /* Hitam keabu-abuan */
+    border: 1px solid #80cbc4;
+    color: #e0f2f1;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat fokus pada input */
+.form-control:focus {
+    border-color: #4db6ac; /* Hijau tosca gelap */
+    outline: none;
+    box-shadow: 0 0 5px #4db6ac;
+}
+
+/* Tombol utama */
+.btn-primary {
+    background-color: #80cbc4;
+    border: none;
+    color: #1e1e1e; /* Warna teks pada tombol */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Efek hover pada tombol */
+.btn-primary:hover {
+    background-color: #4db6ac;
+    color: #ffffff; /* Warna teks saat hover */
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tombol logout */
+.btn-danger {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Efek hover tombol logout */
+.btn-danger:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Link */
+p a {
+    color: #80cbc4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    color: #4db6ac;
+    text-decoration: underline;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}

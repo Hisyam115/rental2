@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark text-light" id="sidebar">
+            <div class="sidebar-header text-center">
+                <h2>LOGO</h2>
+            </div>
+            <ul class="list-unstyled components">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li><a href="#">Table</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="d-flex align-items-center justify-content-center">
+                    <small>Username</small><br>
+                    <small>user@example.com</small>
+                </div>
+            </div>
+        </div>
+        <!-- Main content -->
+        <div id="page-content-wrapper" class="w-100">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="btn btn-outline-light" id="menu-toggle">☰</button>
+                <div class="ml-auto">
+                    <button class="btn btn-outline-light">🗨️</button>
+                </div>
+            </nav>
+            <!-- Dashboard Content -->
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center p-4">
+                            <i class="fas fa-tint fa-3x mb-3"></i>
+                            <h5>Humidity</h5>
+                            <div class="circle">
+                                <span>--%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center p-4">
+                            <i class="fas fa-thermometer-half fa-3x mb-3"></i>
+                            <h5>Temperature</h5>
+                            <div class="circle">
+                                <span>--°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center p-4">
+                            <i class="fas fa-water fa-3x mb-3"></i>
+                            <h5>pH Tanah</h5>
+                            <div class="circle">
+                                <span>--%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card p-4">
+                            <i class="fas fa-heartbeat fa-3x mb-3"></i>
+                            <h5>Getaran</h5>
+                            <div class="chart">
+                                <!-- Placeholder for Graph -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
+</body>
+</html>
