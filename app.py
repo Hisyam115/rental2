@@ -9,10 +9,11 @@ app = Flask(__name__)
 
 # Konfigurasi database
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",  # Ganti dengan username MySQL Anda
-    password="",  # Ganti dengan password MySQL Anda
-    database="fprentalps"  # Ganti dengan nama database Anda
+    user="rental2", 
+    password="Adminrental123", 
+    host="rental2.mysql.database.azure.com", 
+    port=3306, 
+    database="fprentalps"
 )
 
 # Secret key for session management
