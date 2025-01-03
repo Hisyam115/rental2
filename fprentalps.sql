@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 03, 2025 at 09:35 AM
+-- Generation Time: Jan 03, 2025 at 09:49 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -62,7 +62,8 @@ CREATE TABLE `sewa` (
 --
 
 INSERT INTO `sewa` (`id_sewa`, `tanggal_sewa`, `tanggal_kembali`, `total_harga`, `device_id`, `user_id`) VALUES
-(32, '2025-01-03', '2025-01-04', 150000, 3, 2);
+(32, '2025-01-03', '2025-01-04', 150000, 3, 2),
+(33, '2025-01-04', '2025-01-06', 200000, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -127,7 +128,7 @@ ALTER TABLE `device`
 -- AUTO_INCREMENT for table `sewa`
 --
 ALTER TABLE `sewa`
-  MODIFY `id_sewa` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_sewa` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `users`
